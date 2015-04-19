@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hotéis no Brasil e no Mundo pelos melhores preços MalaPronta.com</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style type="text/css">
+      html, body{
+        width: 330px;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      }
+      .popup-search {
+      }
+      .popup-search form {
+        padding: 20px;
+        background-color: #16598a;
+      }
+      .mp-logo {
+        padding: 15px;
+        text-align: center;
+      }
+      .popup-header {
+        background-color: #16598a;
+        padding: 15px 20px 0;
+        margin-bottom: 0;
+      }
+      .popup-header h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+      }
+      .popup-search .col-md-6 {
+        width: 50%;
+        float: left;
+      }
+      .popup-search .col-checkin {
+        padding-right: 5px;
+      }
+      .popup-search .col-checkout {
+        padding-left: 5px;
+      }
+      .popup-search .btn {
+        background-color: #fc3;
+        color: #000;
+        font-weight: 600;
+      }
+    </style>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/masked.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+
+    <div class="popup-search" id="hotel-search">
+      <div class="mp-logo">
+        <a href="http://www.malapronta.com.br" title="Hotéis no Brasil e no Mundo pelos melhores preços MalaPronta.com" target="_blank">
+          <img src="images/logo-malapronta.png" alt="Hotéis no Brasil e no Mundo pelos melhores preços MalaPronta.com">
+        </a>
+      </div>
+      <div class="popup-header">
+        <h3>Encontre seu hotel</h3>
+      </div>
+      <form class="form-inline form-tab-inline" role="form" target="_blank" name="searchTab" id="searchTabForm" action="http://www.malapronta.com.br/resultados?type_search=d" method="post">
+
+        <div class="form-group">
+          <input type="text" class="form-tabc1 form-control ac_input" name="searchTab[destination]" id="search_destination_tab" placeholder="Para onde você deseja ir?" value="" autocomplete="off">
+        </div>
+
+        <input readonly="readonly" type="hidden" name="searchTab[destination_selected]" id="search_destination_tab_selected" value="curitiba-parana-brasil">
+
+        <div class="form-group row">
+          <div class="col-md-6 col-checkin">
+            <input type="text" class="form-tabc2 form-control date" name="searchTab[checkin]" id="searchTab_checkin" placeholder="Data de entrada" value="">
+          </div>
+          <div class="col-md-6 col-checkout">
+            <input type="text" class="form-tabc3 form-control date" name="searchTab[checkout]" id="searchTab_checkout" placeholder="Data de saída" value="">
+          </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary btn-block" id="searchTab-submit" value="Pesquisar">
+
+        <input type="hidden" id="max_persons_per_room" value="8">
+        <input type="hidden" id="max_child_per_room" value="4">
+      </form>
+    </div>
+  </body>
+</html>
+
